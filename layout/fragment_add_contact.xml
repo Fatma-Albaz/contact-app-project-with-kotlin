@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dark_blue_rounded_without_outlier_bg"
+    android:paddingHorizontal="20dp"
+    android:layout_gravity="bottom"
+    android:paddingVertical="18dp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/contact_picture_IV"
+        android:layout_width="143dp"
+        android:layout_height="147dp"
+        android:background="@drawable/dark_blue_rounded_with_gold_outlier_bg"
+        android:src="@drawable/default_contact_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/contact_name_TV"
+        style="@style/goldTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="13dp"
+        android:text="@string/default_name_value"
+        app:layout_constraintBottom_toTopOf="@+id/firstHorizontalLine"
+        app:layout_constraintStart_toEndOf="@id/contact_picture_IV"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/firstHorizontalLine"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="22dp"
+        android:background="@color/gold"
+        app:layout_constraintBottom_toTopOf="@+id/contact_email_TV"
+        app:layout_constraintStart_toStartOf="@id/contact_name_TV"
+        app:layout_constraintTop_toBottomOf="@+id/contact_name_TV"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/contact_email_TV"
+        style="@style/goldTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/default_email_value"
+        app:layout_constraintBottom_toTopOf="@+id/secondHorizontalLine"
+        app:layout_constraintStart_toEndOf="@id/contact_picture_IV"
+        app:layout_constraintTop_toBottomOf="@+id/firstHorizontalLine" />
+
+    <View
+        android:id="@+id/secondHorizontalLine"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginVertical="16dp"
+        android:layout_marginEnd="22dp"
+        android:background="@color/gold"
+        app:layout_constraintBottom_toTopOf="@+id/contact_number_TV"
+        app:layout_constraintStart_toStartOf="@id/contact_name_TV"
+        app:layout_constraintTop_toBottomOf="@+id/contact_email_TV"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/contact_number_TV"
+        style="@style/goldTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginBottom="13dp"
+        android:text="@string/default_number_value"
+        app:layout_constraintBottom_toBottomOf="@id/contact_picture_IV"
+        app:layout_constraintStart_toEndOf="@id/contact_picture_IV"
+        app:layout_constraintTop_toBottomOf="@+id/secondHorizontalLine" />
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/contact_name_ET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="20dp"
+        android:paddingHorizontal="16dp"
+        style="@style/whiteTextStyle"
+        android:background="@drawable/dark_blue_rounded_with_gold_outlier_bg"
+        android:hint="Enter User Name"
+        android:textColorHint="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/contact_picture_IV"
+        android:layout_marginTop="16dp"
+        />
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/contact_email_ET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="20dp"
+        android:paddingHorizontal="16dp"
+        style="@style/whiteTextStyle"
+        android:background="@drawable/dark_blue_rounded_with_gold_outlier_bg"
+        android:hint="Enter User Email"
+        android:textColorHint="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/contact_name_ET"
+        app:layout_constraintBottom_toTopOf="@id/contact_phone_ET"
+        android:layout_marginTop ="9dp"
+        />
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/contact_phone_ET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="20dp"
+        android:paddingHorizontal="16dp"
+        android:layout_marginTop ="9dp"
+        style="@style/whiteTextStyle"
+        android:background="@drawable/dark_blue_rounded_with_gold_outlier_bg"
+        android:hint="Enter User Phone"
+        android:textColorHint="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/contact_email_ET"
+        />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/add_contact_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/contact_phone_ET"
+            android:background="@drawable/gold_rounded_bg"
+            android:layout_marginTop="16dp"
+            android:text="Enter User"
+            style="@style/darkBlueTextStyle"
+            android:textColor="@color/dark_blue"
+            android:paddingVertical="18dp"
+            />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

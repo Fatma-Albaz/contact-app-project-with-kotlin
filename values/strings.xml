@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Contact app</string>
+    <string name="default_name_value">Fatma Albaz</string>
+    <string name="default_email_value">fatmatarek2201@gmail.com</string>
+    <string name="default_number_value">01554852928</string>
+    <string name="no_contacts">There is No Contacts Added Here</string>
+</resources>
